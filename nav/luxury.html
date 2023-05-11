@@ -4,7 +4,7 @@
    <head>
       <meta charset="utf-8">
       <title>ZALORA</title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="../css/style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -37,7 +37,7 @@
                 <a href="anak.html">ANAK</a>
             </li>
             <li>
-                <a href="home-lifestyle.html">HOME & LIFESTYLE</a>
+                <a href="../index.html">HOME</a>
             </li>
          </div>
          <div class="search-icon">
@@ -51,8 +51,118 @@
             <button type="submit" class="fas fa-search"></button>
          </form>
          <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-user"aria-hidden="true" style="color: azure;"></i></a></li></span>
-         <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-heart"aria-hidden="true" style="color: azure;"></i></a></li></span>
-         <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-star"aria-hidden="true" style="color: azure;"></i></a></li></span>
+         <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-heart"aria-hidden="true" style="color: azure; text-decoration:none;"></i></a></li></span>
+         <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-star"aria-hidden="false" style="color: azure;list-style-type:none;"></i></a></li></span>
       </nav>
+      <div class="banner_bg_main">
+        <div class="container">
+           <div class="header_section">
+              <div class="row">
+                 <div class="col-sm-12">
+                    <div class="custom_menu">
+                        <ul>
+                          <li><a href="">Best Sellers</a></li>
+                          <li><a href="">New Releases</a></li>
+                          <li><a href="">Service</a></li>
+                        </ul>
+                    </div>
+                    <style>                      
+                        .banner_bg_main {
+                            width: 100%;
+                            float: left;
+                            height: auto;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                        }
+                        .header_section {
+                            width: 100%;
+                            float: left;
+                            background-color: #0303039a;
+                            clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+                            height: auto;
+                            padding: 4px 0px;
+                        }
+                        .custom_menu {
+                            width: 100%;
+                            margin: 0 auto;
+                            text-align: center;
+                        }
+
+                        .custom_menu ul {
+                            margin: 0px;
+                            padding: 0px;
+                            display: inline-block;
+                            list-style-type:none;
+                            text-decoration:none;
+                        }
+
+                        .custom_menu li {
+                            float: left;
+                            font-size: 14px;
+                            color: #f1f1f1;
+                            padding: 6px 8px 0px 8px;
+                            list-style-type:none;
+                        
+                        }
+
+                        .custom_menu li a {
+                            color: #f1f1f1;
+                            text-decoration:none;
+                        }
+
+                        .custom_menu li a:hover {
+                            color: #000000;
+                        }
+
+                    </style>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="container">
+            <h1>ZALORA</h1>
+            <div class=gambar-slider>
+                <div class=isi-slider>
+                  <img src="../images/zalora1.jpg" alt="Gambar 1">
+                  <img src="../images/zalora3.jpg" alt="Gambar 0">
+                  <img src="../images/zalora2.jpg" alt="Gambar 1">
+                  <img src="../images/zalora1.jpg" alt="Gambar 2">
+                  <img src="../images/zalora3.jpg" alt="Gambar 3">
+                </div>
+            </div>
+        </div>        
+        
+        <script>
+            $(document).ready(function(){
+                console.log('Im ready');
+            });
+        </script>
+      
+        <script>
+            const menuBtn = document.querySelector(".menu-icon span");
+            const searchBtn = document.querySelector(".search-icon");
+            const cancelBtn = document.querySelector(".cancel-icon");
+            const items = document.querySelector(".nav-items");
+            const form = document.querySelector("form");
+            menuBtn.onclick = ()=>{
+              items.classList.add("active");
+              menuBtn.classList.add("hide");
+              searchBtn.classList.add("hide");
+              cancelBtn.classList.add("show");
+            }
+            cancelBtn.onclick = ()=>{
+              items.classList.remove("active");
+              menuBtn.classList.remove("hide");
+              searchBtn.classList.remove("hide");
+              cancelBtn.classList.remove("show");
+              form.classList.remove("active");
+              cancelBtn.style.color = "#ff3d00";
+            }
+            searchBtn.onclick = ()=>{
+              form.classList.add("active");
+              searchBtn.classList.add("hide");
+              cancelBtn.classList.add("show");
+            }
+         </script>
    </body>
 </html>

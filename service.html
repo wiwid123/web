@@ -17,9 +17,7 @@
          <div class="logo">
             ZALORA
          </div>
-         
          <div class="nav-items">
-
             <li>
                 <a href="nav/wanita.html">WANITA</a>
             </li>
@@ -39,7 +37,7 @@
                 <a href="nav/anak.html">ANAK</a>
             </li>
             <li>
-                <a href="index.html">HOME </a>
+                <a href="index.html">HOME</a>
             </li>
          </div>
          <div class="search-icon">
@@ -49,27 +47,8 @@
             <span class="fas fa-times"></span>
          </div>
          <form action="#">
-            <input type="text" id="cari kata"class="search-data" onkeyup="prosesMenu()"placeholder="Search" required>
-            <button type="submit" class="fas fa-search">
-                <script>   
-                    function prosesMenu()
-                    {
-                        var input = document.getElementById("cariKat");
-                        var filter = input.value.toLowerCase();
-                        var ul = document.getElementById("daftarKategori");
-                        var li = document.querySelectorAll("li")
-                        console.log(li)
-                        for(var i = 0; i<li.length; i++){
-                            var ahref = document.querySelectorAll("a")[i];
-                            if(ahref.innerHTML.toLowerCase().indexOf(filter) > -1){
-                                li[i].style.display = "";
-                            }else{
-                                li[i].style.display = "none";
-                            }
-                        }
-                    }
-                </script>
-            </button>
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
          </form>
          <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-user"aria-hidden="true" style="color: azure;"></i></a></li></span>
          <span><li><a href="/"><i class="fas fa-sharp fa-solid fa-heart"aria-hidden="true" style="color: azure; text-decoration:none;"></i></a></li></span>
@@ -89,7 +68,7 @@
                     </div>
                     <style>                      
                         .banner_bg_main {
-                            width:98%;
+                            width: 100%;
                             float: left;
                             height: auto;
                             background-size: 100%;
